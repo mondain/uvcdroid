@@ -1,0 +1,18 @@
+*.iml
+.gradle/
+.kotlin/
+local.properties
+.idea/
+.claude/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.aar
+*.keystore
+*.jks
+# Native prebuilts (track separately or build from sources)
+src/main/cpp/libs/*/*.a
