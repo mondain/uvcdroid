@@ -82,3 +82,7 @@ camera.release()
 
 You must request USB permission for the device (`UsbManager.requestPermission`)
 before calling `connect`.
+
+## License
+
+uvcdroid is released under the Apache License 2.0. See [LICENSE](LICENSE).
