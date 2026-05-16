@@ -29,7 +29,10 @@ class UVCCamera {
         return ok
     }
 
-    fun startStream(surface: Surface): Boolean = nativeStartStream(surface)
+    fun startStream(surface: Surface): Boolean = nativeStartStream(surface, null)
+
+    fun startStream(surface: Surface, previewSurface: Surface?): Boolean =
+        nativeStartStream(surface, previewSurface)
 
     fun stopStream() = nativeStopStream()
 
@@ -40,7 +43,7 @@ class UVCCamera {
     }
 
     private external fun nativeConnect(fd: Int): Boolean
-    private external fun nativeStartStream(surface: Surface): Boolean
+    private external fun nativeStartStream(surface: Surface, previewSurface: Surface?): Boolean
     private external fun nativeStopStream()
     private external fun nativeRelease()
 }
